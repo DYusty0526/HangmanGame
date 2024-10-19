@@ -28,77 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
+            lbl_Word = new Label();
+            btn_New = new Button();
+            btn_Submit = new Button();
+            txtBox_Guess = new TextBox();
+            lbl_Guesses = new Label();
+            lbl_Incorrect = new Label();
             SuspendLayout();
             // 
-            // label1
+            // lbl_Word
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(201, 147);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            lbl_Word.AutoSize = true;
+            lbl_Word.Location = new Point(210, 146);
+            lbl_Word.Name = "lbl_Word";
+            lbl_Word.Size = new Size(26, 20);
+            lbl_Word.TabIndex = 0;
+            lbl_Word.Text = "lbl";
             // 
-            // button1
+            // btn_New
             // 
-            button1.Location = new Point(61, 344);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btn_New.Location = new Point(12, 24);
+            btn_New.Name = "btn_New";
+            btn_New.Size = new Size(94, 29);
+            btn_New.TabIndex = 1;
+            btn_New.Text = "NewGame";
+            btn_New.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_Submit
             // 
-            button2.Location = new Point(291, 344);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 2;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btn_Submit.Location = new Point(169, 338);
+            btn_Submit.Name = "btn_Submit";
+            btn_Submit.Size = new Size(106, 29);
+            btn_Submit.TabIndex = 2;
+            btn_Submit.Text = "Submit";
+            btn_Submit.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtBox_Guess
             // 
-            textBox1.Location = new Point(156, 225);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 3;
+            txtBox_Guess.Location = new Point(140, 225);
+            txtBox_Guess.Name = "txtBox_Guess";
+            txtBox_Guess.Size = new Size(165, 27);
+            txtBox_Guess.TabIndex = 3;
             // 
-            // label2
+            // lbl_Guesses
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(369, 24);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 20);
-            label2.TabIndex = 4;
-            label2.Text = "label2";
+            lbl_Guesses.AutoSize = true;
+            lbl_Guesses.Location = new Point(340, 24);
+            lbl_Guesses.Name = "lbl_Guesses";
+            lbl_Guesses.Size = new Size(90, 20);
+            lbl_Guesses.TabIndex = 4;
+            lbl_Guesses.Text = "Guesses Left";
             // 
-            // label3
+            // lbl_Incorrect
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(369, 64);
-            label3.Name = "label3";
-            label3.Size = new Size(50, 20);
-            label3.TabIndex = 5;
-            label3.Text = "label3";
+            lbl_Incorrect.AutoSize = true;
+            lbl_Incorrect.Location = new Point(305, 62);
+            lbl_Incorrect.Name = "lbl_Incorrect";
+            lbl_Incorrect.Size = new Size(125, 20);
+            lbl_Incorrect.TabIndex = 5;
+            lbl_Incorrect.Text = "Incorrect Guesees";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(442, 450);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(label1);
+            Controls.Add(lbl_Incorrect);
+            Controls.Add(lbl_Guesses);
+            Controls.Add(txtBox_Guess);
+            Controls.Add(btn_Submit);
+            Controls.Add(btn_New);
+            Controls.Add(lbl_Word);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -107,11 +107,11 @@
 
         #endregion
 
-        private Label label1;
-        private Button button1;
-        private Button button2;
-        private TextBox textBox1;
-        private Label label2;
-        private Label label3;
+        private Label lbl_Word;
+        private Button btn_New;
+        private Button btn_Submit;
+        private TextBox txtBox_Guess;
+        private Label lbl_Guesses;
+        private Label lbl_Incorrect;
     }
 }
