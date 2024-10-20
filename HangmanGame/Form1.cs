@@ -26,8 +26,8 @@ namespace HangmanGame
         private Random random = new Random();
 
         //These are the predetermined words that I used for the game
-        private string[] wordList = { "word", "grapefruit", "programming", "syntax", "care", "ocean", "cat", "astronomy", "zombie", "superhero", "dancer" };
-
+        private string[] wordList = { "word", "grapefruit", "programming", "syntax", "care", "ocean", "cat", "astronomy", "zombie", "superhero", "dancer", "computer" };
+        //There are 12 Random letters. ALL IN LOWERCASE
 
         private void NewGame()
         {
