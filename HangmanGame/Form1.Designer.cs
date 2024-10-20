@@ -34,6 +34,8 @@
             txtBox_Guess = new TextBox();
             lbl_Guesses = new Label();
             lbl_Incorrect = new Label();
+            lbl_Round = new Label();
+            lbl_WinS = new Label();
             SuspendLayout();
             // 
             // lbl_Word
@@ -47,9 +49,9 @@
             // 
             // btn_New
             // 
-            btn_New.Location = new Point(31, 24);
+            btn_New.Location = new Point(167, 400);
             btn_New.Name = "btn_New";
-            btn_New.Size = new Size(94, 29);
+            btn_New.Size = new Size(106, 29);
             btn_New.TabIndex = 1;
             btn_New.Text = "NewGame";
             btn_New.UseVisualStyleBackColor = true;
@@ -75,26 +77,46 @@
             // lbl_Guesses
             // 
             lbl_Guesses.AutoSize = true;
-            lbl_Guesses.Location = new Point(341, 24);
+            lbl_Guesses.Location = new Point(341, 9);
             lbl_Guesses.Name = "lbl_Guesses";
-            lbl_Guesses.Size = new Size(90, 20);
+            lbl_Guesses.Size = new Size(93, 20);
             lbl_Guesses.TabIndex = 4;
-            lbl_Guesses.Text = "Guesses Left";
+            lbl_Guesses.Text = "Guesses Left:";
             // 
             // lbl_Incorrect
             // 
             lbl_Incorrect.AutoSize = true;
-            lbl_Incorrect.Location = new Point(235, 71);
+            lbl_Incorrect.Location = new Point(248, 44);
             lbl_Incorrect.Name = "lbl_Incorrect";
-            lbl_Incorrect.Size = new Size(125, 20);
+            lbl_Incorrect.Size = new Size(128, 20);
             lbl_Incorrect.TabIndex = 5;
-            lbl_Incorrect.Text = "Incorrect Guesees";
+            lbl_Incorrect.Text = "Incorrect Guesees:";
+            // 
+            // lbl_Round
+            // 
+            lbl_Round.AutoSize = true;
+            lbl_Round.Location = new Point(12, 9);
+            lbl_Round.Name = "lbl_Round";
+            lbl_Round.Size = new Size(55, 20);
+            lbl_Round.TabIndex = 6;
+            lbl_Round.Text = "Round:";
+            // 
+            // lbl_WinS
+            // 
+            lbl_WinS.AutoSize = true;
+            lbl_WinS.Location = new Point(12, 44);
+            lbl_WinS.Name = "lbl_WinS";
+            lbl_WinS.Size = new Size(79, 20);
+            lbl_WinS.TabIndex = 7;
+            lbl_WinS.Text = "WinStreak:";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(465, 450);
+            Controls.Add(lbl_WinS);
+            Controls.Add(lbl_Round);
             Controls.Add(lbl_Incorrect);
             Controls.Add(lbl_Guesses);
             Controls.Add(txtBox_Guess);
@@ -115,5 +137,7 @@
         private TextBox txtBox_Guess;
         private Label lbl_Guesses;
         private Label lbl_Incorrect;
+        private Label lbl_Round;
+        private Label lbl_WinS;
     }
 }
