@@ -47,5 +47,55 @@ namespace HangmanGame
 
         }
 
+        private void btn_Submit_Click(object sender, EventArgs e)
+        {
+            //This line gets the guessed letter from the input textbox all in lowecase
+            char guess = txtBox_Guess.Text.ToLower()[0];
+            //clears for next guess
+            txtBox_Guess.Clear();
+
+            //Reveals a letter if it is correct
+            if (secretWord.Contains(guess))
+            {
+                for (int i = 0; i < secretWord.Length; i++)
+                {
+                    if (secretWord[i] == guess)
+                    {
+                        displayWord[i] = guess;
+                    }
+                }
+            }
+            else
+            {
+                //iff wrong id adds the guess to the incorrect guesses list
+                if (!incorrectGuesses.Contains(guess))
+                {
+                    incorrectGuesses.Add(guess);
+                    remainingGuesses--; //Reduces the number of guesses left
+                }
+            }
+
+            //This updates the display accordingly 
+            UpdateGame();
+            CheckforEndGame();
+        }
+        private void CheckforEndGame()
+        {
+            if (remainingGuesses == 0)
+            {
+                MessageBox.Show("You have Failed! bro is dead... The correct word was: " + secretWord);
+                btn_Submit.Enabled = false; //Button is disabled
+            }
+            else if (!displayWord.Contains('_'))
+            {
+                MessageBox.Show("You did it! The man is saved from death, be proud!");
+                btn_Submit.Enabled = false;
+            }
+        }
+        private void btn_New_Click(object sender, EventArgs e)
+        {
+            NewGame(); //Resets the game
+            btn_Submit.Enabled = true;
+        }
     }
 }
